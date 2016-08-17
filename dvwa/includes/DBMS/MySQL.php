@@ -6,19 +6,19 @@ This file contains all of the code to setup the initial MySQL database. (setup.p
 
 */
 
-if( !@mysql_connect( $_DVWA[ 'db_server' ], $_DVWA[ 'db_user' ], $_DVWA[ 'db_password' ] ) ) {
+if( !@mysql_connect( 'dvwa', 'root', 'root' ) ) {
 	//dvwaMessagePush( "Could not connect to the database - please check the config file." );
 	//dvwaPageReload();
 }
 
 // Create database
-$drop_db = "DROP DATABASE IF EXISTS " . $_DVWA[ 'db_database' ] . ";";
+$drop_db = "DROP DATABASE IF EXISTS " . 'dvwa'. ";";
 if( !@mysql_query ( $drop_db ) ) {
 	//dvwaMessagePush( "Could not drop existing database<br />SQL: ".mysql_error() );
 	//dvwaPageReload();
 }
 
-$create_db = "CREATE DATABASE " . $_DVWA[ 'db_database' ] . ";";
+$create_db = "CREATE DATABASE " . 'dvwa' . ";";
 
 if( !@mysql_query ( $create_db ) ) {
 	//dvwaMessagePush( "Could not create database<br />SQL: ".mysql_error() );
@@ -28,7 +28,7 @@ if( !@mysql_query ( $create_db ) ) {
 //dvwaMessagePush( "Database has been created." );
 
 // Create table 'users'
-if( !@mysql_select_db( $_DVWA[ 'db_database' ] ) ) {
+if( !@mysql_select_db( 'dvwa' ) ) {
 	//dvwaMessagePush( 'Could not connect to database.' );
 	//dvwaPageReload();
 }
@@ -59,21 +59,21 @@ if( !mysql_query( $insert ) ){
 	//dvwaPageReload();
 }
 //dvwaMessagePush( "Data inserted into 'users' table." );
-	
+
 // Create guestbook table
 $create_tb_guestbook = "CREATE TABLE guestbook (comment_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT, comment varchar(300), name varchar(100), PRIMARY KEY (comment_id));";
-	
+
 if( !mysql_query( $create_tb_guestbook ) ){
 	//dvwaMessagePush( "Table could not be created<br />SQL: ".mysql_error() );
 	//dvwaPageReload();
 }
-	
+
 //dvwaMessagePush( "'guestbook' table was created." );
-	
+
 // Insert data into 'guestbook'
 $insert = "INSERT INTO guestbook VALUES
 ('1','This is a test comment.','test');";
-	
+
 if( !mysql_query( $insert ) ){
 	//dvwaMessagePush( "Data could not be inserted into 'guestbook' table<br />SQL: ".mysql_error() );
 	//dvwaPageReload();
