@@ -40,6 +40,7 @@ if( !mysqli_query($GLOBALS["___mysqli_ston"],  $create_tb ) ) {
 //dvwaMessagePush( "'users' table was created." );
 // Insert some data into users
 // Get the base directory for the avatar media...
+$SERVER_NAME = 'Web Server SERVER_NAME: <em>' . $_SERVER[ 'SERVER_NAME' ] . '</em>';
 $baseUrl  = 'http://' . $_SERVER[ 'SERVER_NAME' ] . $_SERVER[ 'PHP_SELF' ];
 $stripPos = strpos( $baseUrl, 'setup.php' );
 $baseUrl  = substr( $baseUrl, 0, $stripPos ) . 'hackable/users/';
