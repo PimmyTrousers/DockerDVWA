@@ -26,7 +26,7 @@ if( !@mysqli_query($GLOBALS["___mysqli_ston"],  $create_db ) ) {
 	//dvwaMessagePush( "Could not create database<br />SQL: " . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)) );
 	//dvwaPageReload();
 }
-dvwaMessagePush( "Database has been created." );
+//dvwaMessagePush( "Database has been created." );
 // Create table 'users'
 if( !@((bool)mysqli_query($GLOBALS["___mysqli_ston"], "USE " . $_DVWA[ 'db_database' ])) ) {
 	//dvwaMessagePush( 'Could not connect to database.' );
