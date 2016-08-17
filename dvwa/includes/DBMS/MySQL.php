@@ -71,7 +71,7 @@ if( !mysqli_query($GLOBALS["___mysqli_ston"],  $insert ) ) {
 //dvwaMessagePush( "Data inserted into 'guestbook' table." );
 // Done
 //dvwaMessagePush( "<em>Setup successful</em>!" );
-if( !dvwaIsLoggedIn())
+//if( !dvwaIsLoggedIn())
 	//dvwaMessagePush( "Please <a href='login.php'>login</a>.<script>setTimeout(function(){window.location.href='login.php'},5000);</script>" );
 //dvwaPageReload();
 ?>
