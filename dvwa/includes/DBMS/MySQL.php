@@ -18,9 +18,9 @@ if( !@mysql_query ( $drop_db ) ) {
 	//dvwaPageReload();
 }
 
-$create_db = "CREATE DATABASE " . "dvwa" . ";";
+//$create_db = "CREATE DATABASE " . "dvwa" . ";";
 
-if( !@mysql_query ( $create_db ) ) {
+if( !@mysql_query ( "CREATE DATABASE dvwa;" ) ) {
 	//dvwaMessagePush( "Could not create database<br />SQL: ".mysql_error() );
 	//dvwaPageReload();
 }
@@ -34,7 +34,7 @@ if( !@mysql_select_db( "dvwa" ) ) {
 }
 
 $create_tb = "CREATE TABLE users (user_id int(6),first_name varchar(15),last_name varchar(15), user varchar(15), password varchar(32),avatar varchar(70), PRIMARY KEY (user_id));";
-if( !mysql_query( $create_tb ) ){
+if( !mysql_query( "CREATE DATABASE dvwa;" ) ){
 	//dvwaMessagePush( "Table could not be created<br />SQL: ".mysql_error() );
 	//dvwaPageReload();
 }
@@ -71,10 +71,10 @@ if( !mysql_query( $create_tb_guestbook ) ){
 //dvwaMessagePush( "'guestbook' table was created." );
 
 // Insert data into 'guestbook'
-$insert = "INSERT INTO guestbook VALUES
-('1','This is a test comment.','test');";
+//$insert = "INSERT INTO guestbook VALUES
+//('1','This is a test comment.','test');";
 
-if( !mysql_query( $insert ) ){
+if( !mysql_query( "INSERT INTO guestbook VALUES ('1','This is a test comment.','test');" ) ){
 	//dvwaMessagePush( "Data could not be inserted into 'guestbook' table<br />SQL: ".mysql_error() );
 	//dvwaPageReload();
 }
