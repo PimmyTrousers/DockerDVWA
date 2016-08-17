@@ -6,19 +6,19 @@ This file contains all of the code to setup the initial MySQL database. (setup.p
 
 */
 
-if( !@mysql_connect( 'dvwa', 'root', 'p@ssw0rd' ) ) {
+if( !@mysql_connect( "dvwa", "root", "p@ssw0rd" ) ) {
 	//dvwaMessagePush( "Could not connect to the database - please check the config file." );
 	//dvwaPageReload();
 }
 
 // Create database
-$drop_db = "DROP DATABASE IF EXISTS " . 'dvwa'. ";";
+$drop_db = "DROP DATABASE IF EXISTS " . "dvwa" . ";";
 if( !@mysql_query ( $drop_db ) ) {
 	//dvwaMessagePush( "Could not drop existing database<br />SQL: ".mysql_error() );
 	//dvwaPageReload();
 }
 
-$create_db = "CREATE DATABASE " . 'dvwa' . ";";
+$create_db = "CREATE DATABASE " . "dvwa" . ";";
 
 if( !@mysql_query ( $create_db ) ) {
 	//dvwaMessagePush( "Could not create database<br />SQL: ".mysql_error() );
@@ -28,7 +28,7 @@ if( !@mysql_query ( $create_db ) ) {
 //dvwaMessagePush( "Database has been created." );
 
 // Create table 'users'
-if( !@mysql_select_db( 'dvwa' ) ) {
+if( !@mysql_select_db( "dvwa" ) ) {
 	//dvwaMessagePush( 'Could not connect to database.' );
 	//dvwaPageReload();
 }
