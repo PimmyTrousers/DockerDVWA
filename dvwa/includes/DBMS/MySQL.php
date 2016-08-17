@@ -23,9 +23,9 @@ if( !@mysql_query ( $drop_db ) ) {
 	//dvwaPageReload();
 }
 
-//$create_db = "CREATE DATABASE " . "dvwa" . ";";
+$create_db = "CREATE DATABASE " . "dvwa" . ";";
 
-if( !@mysql_query ( "CREATE DATABASE dvwa;" ) ) {
+if( !@mysql_query ( "CREATE DATABASE". $create_db . ";" ) ) {
 	//dvwaMessagePush( "Could not create database<br />SQL: ".mysql_error() );
 	//dvwaPageReload();
 }
