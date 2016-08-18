@@ -10,7 +10,7 @@ $DBMS = 'MySQL';
 #$DBMS = 'PGSQL';
 
 # Database variables
-# WARNING: The database specified under db_database WILL BE ENTIRELY DELETED during setup. 
+# WARNING: The database specified under db_database WILL BE ENTIRELY DELETED during setup.
 # Please use a database dedicated to DVWA.
 
 $_DVWA = array();
@@ -20,7 +20,7 @@ $_DVWA[ 'db_user' ] = 'root';
 $_DVWA[ 'db_password' ] = 'p@ssw0rd';
 
 # Only needed for PGSQL
-$_DVWA[ 'db_port' ] = '5432'; 
+$_DVWA[ 'db_port' ] = '5432';
 
 # ReCAPTCHA Settings
 # Get your keys at https://www.google.com/recaptcha/admin/create
@@ -30,6 +30,6 @@ $_DVWA['recaptcha_private_key'] = "";
 # Default Security Level
 # The default is high, you may wish to set this to either low or medium.
 # If you specify an invalid level, DVWA will default to high.
-$_DVWA['default_security_level'] = "high";
+$_DVWA['default_security_level'] = "low";
 
 ?>
