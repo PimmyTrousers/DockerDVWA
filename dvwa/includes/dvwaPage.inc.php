@@ -302,7 +302,7 @@ function dvwaHtmlEcho( $pPage ) {
 
 	$phpIdsHtml = '<b>PHPIDS:</b> '.( dvwaPhpIdsIsEnabled() ? 'enabled' : 'disabled' );
 
-	$userInfoHtml = '<b>Username:</b> '.( dvwaCurrentUser() );
+	$userInfoHtml = '<b>Username:</b> '.( 'admin' );
 
 	$messagesHtml = messagesPopAllToHtml();
 
