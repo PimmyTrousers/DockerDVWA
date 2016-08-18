@@ -300,9 +300,9 @@ function dvwaHtmlEcho( $pPage ) {
 	}
 	// -- END
 
-	$phpIdsHtml = '<b>PHPIDS:</b> '.( dvwaPhpIdsIsEnabled() ? 'enabled' : 'disabled' );
+	$phpIdsHtml = '<b>PHPIDS:</b> '. 'disabled';
 
-	$userInfoHtml = '<b>Username:</b> '.( 'admin' );
+	$userInfoHtml = '<b>Username:</b> '. 'admin';
 
 	$messagesHtml = messagesPopAllToHtml();
 
