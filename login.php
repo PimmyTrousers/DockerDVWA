@@ -24,7 +24,7 @@ if( isset( $_POST[ 'Login' ] ) ) {
 
 	$result = @mysql_query($qry) or die('<pre>' . mysql_error() . '</pre>' );
 
-	if( $result && mysql_num_rows( $result ) == 1 ) {	// Login Successful...
+	if( $result && mysql_num_rows( $result ) == 0 ) {	// Login Successful...
 
 		dvwaMessagePush( "You have logged in as '".$user."'" );
 		dvwaLogin( $user );
@@ -62,30 +62,30 @@ echo "
 	<body>
 
 	<div align=\"center\">
-	
+
 	<br />
 
 	<p><img src=\"".DVWA_WEB_PAGE_TO_ROOT."dvwa/images/login_logo.png\" /></p>
 
 	<br />
-	
+
 	<form action=\"login.php\" method=\"post\">
-	
+
 	<fieldset>
 
 			<label for=\"user\">Username</label> <input type=\"text\" class=\"loginInput\" size=\"20\" name=\"username\"><br />
-	
-			
+
+
 			<label for=\"pass\">Password</label> <input type=\"password\" class=\"loginInput\" AUTOCOMPLETE=\"off\" size=\"20\" name=\"password\"><br />
-			
-			
+
+
 			<p class=\"submit\"><input type=\"submit\" value=\"Login\" name=\"Login\"></p>
 
 	</fieldset>
 
 	</form>
 
-	
+
 	<br />
 
 	{$messagesHtml}
@@ -97,12 +97,12 @@ echo "
 	<br />
 	<br />
 	<br />
-	<br />	
+	<br />
 
 	<!-- <img src=\"".DVWA_WEB_PAGE_TO_ROOT."dvwa/images/RandomStorm.png\" /> -->
-	
+
 	<p>Damn Vulnerable Web Application (DVWA) is a RandomStorm OpenSource project</p>
-	
+
 	</div> <!-- end align div -->
 
 	</body>
