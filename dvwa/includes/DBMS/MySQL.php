@@ -11,7 +11,7 @@ $_DVWA[ 'db_database' ] = 'dvwa';
 $_DVWA[ 'db_user' ] = 'root';
 $_DVWA[ 'db_password' ] = 'p@ssw0rd';
 
-if( !@($GLOBALS["___mysqli_ston"] = mysqli_connect( $_DVWA[ 'db_server' ],  $_DVWA[ 'db_user' ],  $_DVWA[ 'db_password' ] )) ) {
+$GLOBALS["___mysqli_ston"] = mysqli_connect( $_DVWA[ 'db_server' ],  $_DVWA[ 'db_user' ],  $_DVWA[ 'db_password' ] 
 	//dvwaMessagePush( "Could not connect to the MySQL service.<br />Please check the config file." );
 	//dvwaPageReload();
 }
