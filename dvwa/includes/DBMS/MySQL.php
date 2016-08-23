@@ -14,7 +14,7 @@ $_DVWA[ 'db_password' ] = 'p@ssw0rd';
 $GLOBALS["___mysqli_ston"] = mysqli_connect( $_DVWA[ 'db_server' ],  $_DVWA[ 'db_user' ],  $_DVWA[ 'db_password' ]
 	//dvwaMessagePush( "Could not connect to the MySQL service.<br />Please check the config file." );
 	//dvwaPageReload();
-// Create database
+// Create databasegit
 $create_db = "CREATE DATABASE {$_DVWA[ 'db_database' ]};";
 if( !@mysqli_query($GLOBALS["___mysqli_ston"],  $create_db ) ) {
 	//dvwaMessagePush( "Could not create database<br />SQL: " . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)) );
