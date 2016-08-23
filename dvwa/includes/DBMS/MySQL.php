@@ -15,11 +15,6 @@ $GLOBALS["___mysqli_ston"] = mysqli_connect( $_DVWA[ 'db_server' ],  $_DVWA[ 'db
 	//dvwaMessagePush( "Could not connect to the MySQL service.<br />Please check the config file." );
 	//dvwaPageReload();
 // Create database
-
-if( !@mysqli_query($GLOBALS["___mysqli_ston"],  $drop_db ) ) {
-	//dvwaMessagePush( "Could not drop existing database<br />SQL: " . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)) );
-	//dvwaPageReload();
-}
 $create_db = "CREATE DATABASE {$_DVWA[ 'db_database' ]};";
 if( !@mysqli_query($GLOBALS["___mysqli_ston"],  $create_db ) ) {
 	//dvwaMessagePush( "Could not create database<br />SQL: " . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)) );
