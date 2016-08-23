@@ -11,10 +11,9 @@ $_DVWA[ 'db_database' ] = 'dvwa';
 $_DVWA[ 'db_user' ] = 'root';
 $_DVWA[ 'db_password' ] = 'p@ssw0rd';
 
-$GLOBALS["___mysqli_ston"] = mysqli_connect( $_DVWA[ 'db_server' ],  $_DVWA[ 'db_user' ],  $_DVWA[ 'db_password' ] 
+$GLOBALS["___mysqli_ston"] = mysqli_connect( $_DVWA[ 'db_server' ],  $_DVWA[ 'db_user' ],  $_DVWA[ 'db_password' ]
 	//dvwaMessagePush( "Could not connect to the MySQL service.<br />Please check the config file." );
 	//dvwaPageReload();
-}
 // Create database
 $drop_db = "DROP DATABASE IF EXISTS {$_DVWA[ 'db_database' ]};";
 if( !@mysqli_query($GLOBALS["___mysqli_ston"],  $drop_db ) ) {
